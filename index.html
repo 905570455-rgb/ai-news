@@ -5,59 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI 科技日报</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             min-height: 100vh;
             padding: 20px;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        header {
-            text-align: center;
-            padding: 40px 0;
-            color: #fff;
-        }
+        .container { max-width: 800px; margin: 0 auto; }
+        header { text-align: center; padding: 40px 0; color: #fff; }
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
             background: linear-gradient(90deg, #00d4ff, #7c3aed);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
-        header p {
-            color: #888;
-            font-size: 1rem;
-        }
-        .date {
-            text-align: center;
-            color: #666;
-            margin-bottom: 30px;
-        }
+        .date { text-align: center; color: #666; margin-bottom: 30px; }
         .news-card {
             background: #fff;
             border-radius: 16px;
             padding: 24px;
             margin-bottom: 16px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
+            transition: transform 0.3s;
             text-decoration: none;
             display: block;
             color: inherit;
         }
-        .news-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-        }
+        .news-card:hover { transform: translateY(-4px); }
         .news-card .tag {
             display: inline-block;
             padding: 4px 12px;
@@ -68,50 +44,12 @@
             font-weight: 600;
             margin-bottom: 12px;
         }
-        .news-card h2 {
-            font-size: 1.25rem;
-            color: #1a1a2e;
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-        .news-card .summary {
-            color: #666;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-        .news-card .source {
-            color: #888;
-            font-size: 0.85rem;
-            margin-top: 12px;
-        }
-        .section-title {
-            color: #fff;
-            font-size: 1.2rem;
-            margin: 30px 0 16px 0;
-            padding-left: 16px;
-            border-left: 4px solid #00d4ff;
-        }
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            color: #666;
-            font-size: 0.85rem;
-        }
-        .update-time {
-            text-align: center;
-            color: #555;
-            font-size: 0.8rem;
-            margin-top: 10px;
-        }
-        .refresh-hint {
-            text-align: center;
-            color: #00d4ff;
-            font-size: 0.85rem;
-            margin-top: 20px;
-            padding: 10px;
-            background: rgba(0,212,255,0.1);
-            border-radius: 8px;
-        }
+        .news-card h2 { font-size: 1.25rem; color: #1a1a2e; margin-bottom: 8px; }
+        .news-card .summary { color: #666; font-size: 0.95rem; line-height: 1.6; }
+        .news-card .source { color: #888; font-size: 0.85rem; margin-top: 12px; }
+        .section-title { color: #fff; font-size: 1.2rem; margin: 30px 0 16px 0; padding-left: 16px; border-left: 4px solid #00d4ff; }
+        footer { text-align: center; padding: 40px 0; color: #666; font-size: 0.85rem; }
+        .update-time { text-align: center; color: #555; font-size: 0.8rem; margin-top: 10px; }
     </style>
 </head>
 <body>
@@ -119,12 +57,9 @@
         <header>
             <h1>🤖 AI 科技日报</h1>
             <p>每天更新 AI 行业最新资讯</p>
-            <p class="update-time">更新时间：2026-03-10 23:20</p>
+            <p class="update-time">更新时间：2026-03-11 01:23</p>
         </header>
-        
-        <div class="refresh-hint">💡 对我说"帮我换一批AI新闻"即可刷新</div>
-        
-        <p class="date">2026年3月10日 · 星期一</p>
+        <p class="date">2026年3月11日 · 星期三</p>
         
         <h3 class="section-title">🔥 热门头条</h3>
         
@@ -152,14 +87,14 @@
         <a href="https://www.36kr.com/p/3717041176883716" target="_blank" class="news-card">
             <span class="tag">自动驾驶</span>
             <h2>猛猛干的广州无人出租车，把美国友商的压力拉满了</h2>
-            <p class="summary">中美湾区的Robotaxi大战 广州无人出租车取得领先。</p>
+            <p class="summary">中美湾区的Robotaxi大战，广州无人出租车取得领先。</p>
             <p class="source">来源：36氪</p>
         </a>
         
         <a href="https://www.36kr.com/p/3717034661835523" target="_blank" class="news-card">
             <span class="tag">AI焦虑</span>
             <h2>全民"养龙虾"，一场AI焦虑催生的生意</h2>
-            <p class="summary">AI焦虑催生新商机，全民"养龙虾"现象兴起。OpenClaw成为AI焦虑下的卖铲人经济代表。</p>
+            <p class="summary">AI焦虑催生新商机，全民"养龙虾"现象兴起。</p>
             <p class="source">来源：36氪</p>
         </a>
         
@@ -172,10 +107,10 @@
             <p class="source">来源：36氪</p>
         </a>
         
-        <a href="https://www.36kr.com/p/3716922157250182" target="_blank" class="news-card">
-            <span class="tag">宁德时代</span>
-            <h2>每秒赚2300元，宁德时代交出最强年报</h2>
-            <p class="summary">宁德时代发布2025年报，业绩创新高。</p>
+        <a href="https://www.36kr.com/p/3716911319200259" target="_blank" class="news-card">
+            <span class="tag">Meta</span>
+            <h2>斗跑杨立昆后自己也要被废？ 汪滔赶忙"端菜上桌"</h2>
+            <p class="summary">你会看到Meta AI释放出惊人的速度</p>
             <p class="source">来源：36氪</p>
         </a>
         
@@ -189,14 +124,14 @@
         <a href="https://www.36kr.com/p/3716979078968707" target="_blank" class="news-card">
             <span class="tag">观点</span>
             <h2>中国科学院院士乔红：人类情感，机器无法替代</h2>
-            <p class="summary">中科院院士乔红观点：人类情感是机器无法替代的，AI发展需要考虑人文关怀。</p>
+            <p class="summary">中科院院士乔红观点：人类情感是机器无法替代的。</p>
             <p class="source">来源：36氪</p>
         </a>
         
         <a href="https://www.36kr.com/p/3717054673221256" target="_blank" class="news-card">
             <span class="tag">AI制药</span>
             <h2>AI制药首次实现盈利，告诉我们什么？</h2>
-            <p class="summary">AI制药行业迎来商业化突破，首次实现盈利，标志着行业进入新阶段。</p>
+            <p class="summary">AI制药行业迎来商业化突破，首次实现盈利。</p>
             <p class="source">来源：36氪</p>
         </a>
         
