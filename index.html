@@ -21,123 +21,138 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .date { text-align: center; color: #666; margin-bottom: 30px; }
-        .news-card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 24px;
+        header p { color: #888; font-size: 1rem; }
+        .date { color: #00d4ff; font-size: 1.2rem; margin-bottom: 30px; text-align: center; }
+        .news-item {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 20px;
             margin-bottom: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            text-decoration: none;
-            display: block;
-            color: inherit;
-        }
-        .news-card:hover { transform: translateY(-4px); }
-        .news-card .tag {
-            display: inline-block;
-            padding: 4px 12px;
-            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            border-left: 4px solid #7c3aed;
             color: #fff;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-bottom: 12px;
         }
-        .news-card h2 { font-size: 1.25rem; color: #1a1a2e; margin-bottom: 8px; }
-        .news-card .summary { color: #666; font-size: 0.95rem; line-height: 1.6; }
-        .news-card .source { color: #888; font-size: 0.85rem; margin-top: 12px; }
-        .section-title { color: #fff; font-size: 1.2rem; margin: 30px 0 16px 0; padding-left: 16px; border-left: 4px solid #00d4ff; }
-        footer { text-align: center; padding: 40px 0; color: #666; font-size: 0.85rem; }
-        .update-time { text-align: center; color: #555; font-size: 0.8rem; margin-top: 10px; }
-        .batch-tag { text-align: center; color: #00d4ff; font-size: 1rem; margin-bottom: 20px; }
+        .news-item.agent { border-left-color: #f59e0b; }
+        .news-item.funding { border-left-color: #10b981; }
+        .news-item.safety { border-left-color: #ef4444; }
+        .news-item.product { border-left-color: #3b82f6; }
+        .news-item.open { border-left-color: #8b5cf6; }
+        .news-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; }
+        .news-summary { color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 12px; }
+        .news-source { color: #00d4ff; font-size: 0.85rem; text-decoration: none; }
+        .news-source:hover { text-decoration: underline; }
+        .category { 
+            display: inline-block; 
+            padding: 4px 10px; 
+            border-radius: 20px; 
+            font-size: 0.75rem; 
+            margin-bottom: 10px;
+            background: rgba(124, 58, 237, 0.3);
+        }
+        footer { text-align: center; padding: 40px 0; color: #666; font-size: 0.9rem; }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>🤖 AI 科技日报</h1>
-            <p>每天更新 AI 行业最新资讯</p>
-            <p class="update-time">更新时间：2026-03-11 01:42</p>
-            <p class="batch-tag">📰 第2批 · 全新内容</p>
+            <p>每日 AI 行业资讯精选</p>
         </header>
-        <p class="date">2026年3月11日 · 星期三</p>
         
-        <h3 class="section-title">🔥 新鲜热辣</h3>
-        
-        <a href="https://www.36kr.com/p/3716669527258755" target="_blank" class="news-card">
-            <span class="tag">AI应用</span>
-            <h2>Claude杀入Office全家桶，全球4.5亿打工人的命运被改写</h2>
-            <p class="summary">Claude进入Office，AI正在改变办公方式，全球4.5亿打工人受影响。</p>
-            <p class="source">来源：36氪</p>
-        </a>
-        
-        <a href="https://www.36kr.com/p/3715653109200263" target="_blank" class="news-card">
-            <span class="tag">AI焦虑</span>
-            <h2>火爆，13家科技大厂抢着养龙虾</h2>
-            <p class="summary">科技大厂纷纷布局AI养虾领域，争夺新一轮发展机遇。</p>
-            <p class="source">来源：36氪</p>
-        </a>
-        
-        <a href="https://www.36kr.com/p/3716356320671366" target="_blank" class="news-card">
-            <span class="tag">观点</span>
-            <h2>还是要相信傅盛的产品运</h2>
-            <p class="summary">傅盛分享产品运营经验，探讨产品成功之道。</p>
-            <p class="source">来源：36氪</p>
-        </a>
-        
-        <a href="https://www.36kr.com/p/3716309416294016" target="_blank" class="news-card">
-            <span class="tag">AI焦虑</span>
-            <h2>全民OpenClaw养虾成热潮</h2>
-            <p class="summary">OpenClaw养虾成为新一轮热潮，引爆行业关注。</p>
-            <p class="source">来源：36氪</p>
-        </a>
-        
-        <a href="https://www.36kr.com/p/3716851288241541" target="_blank" class="news-card">
-            <span class="tag">机器人</span>
-            <h2>搭乘人形机器人概念，首开股份再涨停</h2>
-            <p class="summary">人形机器人概念股持续火热，相关企业股价涨停。</p>
-            <p class="source">来源：36氪</p>
-        </a>
-        
-        <a href="https://www.36kr.com/p/3716507876242818" target="_blank" class="news-card">
-            <span class="tag">AI应用</span>
-            <h2>全网疯抢Mac mini养龙虾</h2>
-            <p class="summary">Mac mini成为养虾新设备，引发抢购热潮。</p>
-            <p class="source">来源：36氪</p>
-        </a>
-        
-        <a href="https://www.36kr.com/p/3716922157250182" target="_blank" class="news-card">
-            <span class="tag">新能源</span>
-            <h2>每秒赚2300元，宁德时代交出最强年报</h2>
-            <p class="summary">宁德时代发布2025年报，业绩创新高，每秒赚2300元。</p>
-            <p class="source">来源：36氪</p>
-        </a>
-        
-        <a href="https://www.36kr.com/p/3716911319200259" target="_blank" class="news-card">
-            <span class="tag">Meta</span>
-            <h2>汪滔端菜上桌，Meta AI释放惊人速度</h2>
-            <p class="summary">Meta AI将释放出惊人的速度，引发行业关注。</p>
-            <p class="source">来源：36氪</p>
-        </a>
-        
-        <a href="https://www.36kr.com/p/3716954732311941" target="_blank" class="news-card">
-            <span class="tag">AI应用</span>
-            <h2>AI短剧《霍去病》爆火，但为何成了一场闹剧？</h2>
-            <p class="summary">AI短剧面临质量与版权挑战，狂欢之下存隐忧。</p>
-            <p class="source">来源：36氪</p>
-        </a>
-        
-        <a href="https://www.36kr.com/p/3716979078968707" target="_blank" class="news-card">
-            <span class="tag">机器人</span>
-            <h2>国内人形机器人行业瓶颈：如何实现领跑？</h2>
-            <p class="summary">国内人形机器人行业的最大瓶颈是如何实现从跟跑到领跑的跨越。</p>
-            <p class="source">来源：36氪</p>
-        </a>
-        
+        <div class="date">2026年3月11日（周三）</div>
+
+        <div class="news-item">
+            <span class="category">🧠 大模型</span>
+            <div class="news-title">Yann LeCun 筹集 10 亿美元构建理解物理世界的 AI</div>
+            <div class="news-summary">Meta 前首席 AI 科学家一直认为，通用人工智能将来自于对物理世界的掌握，而非语言。他的新创业公司 AMI 旨在证明这一点。</div>
+            <a class="news-source" href="https://www.wired.com/story/yann-lecun-raises-dollar1-billion-to-build-ai-that-understands-the-physical-world/">来源: Wired</a>
+        </div>
+
+        <div class="news-item">
+            <span class="category">🧠 大模型</span>
+            <div class="news-title">Google 将 Gemini 带入 Chrome 扩展到印度、加拿大、新西兰</div>
+            <div class="news-summary">Google 继续扩大其 AI 助手在全球市场的覆盖范围。</div>
+            <a class="news-source" href="https://techcrunch.com/2026/03/10/google-gemini-chrome-expands-to-india-canada-new-zealand/">来源: TechCrunch</a>
+        </div>
+
+        <div class="news-item agent">
+            <span class="category">🤖 Agent</span>
+            <div class="news-title">Nvidia 计划推出开源 AI Agent 平台</div>
+            <div class="news-summary">在年度开发者大会之前，Nvidia 准备好了一种新的人工智能代理软件方法，类似于 OpenClaw。</div>
+            <a class="news-source" href="https://www.wired.com/story/nvidia-planning-ai-agent-platform-launch-open-source/">来源: Wired</a>
+        </div>
+
+        <div class="news-item agent">
+            <span class="category">🤖 Agent</span>
+            <div class="news-title">Mandiant 创始人 为其自主 AI Agent 安全初创公司融资 1900 万美元</div>
+            <div class="news-summary">安全领域资深人士创立 AI Agent 安全公司，获得大额融资。</div>
+            <a class="news-source" href="https://techcrunch.com/2026/03/10/mandiants-founder-just-raised-190m-for-his-autonomous-ai-agent-security-startup/">来源: TechCrunch</a>
+        </div>
+
+        <div class="news-item funding">
+            <span class="category">💰 融资/商业</span>
+            <div class="news-title">Anthropic 声称 Pentagon 纷争可能让其损失数十亿美元</div>
+            <div class="news-summary">AI 创业公司的高管表示，在特朗普政府将其列为供应链风险后，合作伙伴暂停了交易谈判，警告这可能导致重大收入损失。</div>
+            <a class="news-source" href="https://www.wired.com/story/anthropic-claims-business-is-in-peril-due-to-supply-chain-risk-designation/">来源: Wired</a>
+        </div>
+
+        <div class="news-item funding">
+            <span class="category">💰 融资/商业</span>
+            <div class="news-title">OpenAI 和 Google 员工提交法庭之友简报支持 Anthropic 起诉美国政府</div>
+            <div class="news-summary">Google DeepMind 首席科学家 Jeff Dean 等 AI 研究人员和工程师纷纷为 Anthropic 辩护。</div>
+            <a class="news-source" href="https://www.wired.com/story/openai-deepmind-employees-file-amicus-brief-anthropic-dod-lawsuit/">来源: Wired</a>
+        </div>
+
+        <div class="news-item safety">
+            <span class="category">🛡️ 安全/治理</span>
+            <div class="news-title">Trump 政府不排除对 Anthropic 采取进一步行动</div>
+            <div class="news-summary">白宫正准备针对这家 AI 初创公司发布行政命令，其早期行动正面临重大法庭考验。</div>
+            <a class="news-source" href="https://www.wired.com/story/trump-administration-refuses-to-say-it-wont-take-further-action-against-anthropic/">来源: Wired</a>
+        </div>
+
+        <div class="news-item safety">
+            <span class="category">🛡️ 安全/治理</span>
+            <div class="news-title">关于伊朗战争的虚假 AI 内容充斥着 X</div>
+            <div class="news-summary">X 的 Grok 未能准确验证伊朗冲突的视频画面，并分享了自己生成的关于战争的 AI 图像。</div>
+            <a class="news-source" href="https://www.wired.com/story/fake-ai-content-about-the-iran-war-is-all-over-x/">来源: Wired</a>
+        </div>
+
+        <div class="news-item safety">
+            <span class="category">🛡️ 安全/治理</span>
+            <div class="news-title">DOGE 员工偷窃 Social Security 数据并放入 U 盘</div>
+            <div class="news-summary">据报道，DOGE 员工窃取 Social Security 数据并放入 U 盘，引发安全担忧。</div>
+            <a class="news-source" href="https://techcrunch.com/2026/03/10/doge-employee-stole-social-security-data-and-put-it-on-a-thumb-drive-report-says/">来源: TechCrunch</a>
+        </div>
+
+        <div class="news-item safety">
+            <span class="category">🛡️ 安全/治理</span>
+            <div class="news-title">Anthropic 起诉国防部供应链风险指定</div>
+            <div class="news-summary">这家 Claude 聊天机器人开发商表示，特朗普政府将合同争议升级为对该公司技术的联邦禁令是越权行为。</div>
+            <a class="news-source" href="https://www.wired.com/story/anthropic-sues-department-of-defense-over-supply-chain-risk-designation/">来源: Wired</a>
+        </div>
+
+        <div class="news-item product">
+            <span class="category">🔧 应用/产品</span>
+            <div class="news-title">Google 在 Docs 中推出 Gemini "Help Me Create" 工具</div>
+            <div class="news-summary">Google 将 Gemini 助手注入 Docs、Drive、Sheets 和 Slides，新增功能可以从您的邮件和网络获取信息来帮助起草内容。</div>
+            <a class="news-source" href="https://www.wired.com/story/google-gemini-workspace-ai-tools-hands-on/">来源: Wired</a>
+        </div>
+
+        <div class="news-item product">
+            <span class="category">🔧 应用/产品</span>
+            <div class="news-title">Amazon 在其网站和应用程序上推出医疗 AI 助手</div>
+            <div class="news-summary">Amazon 进一步扩大其在医疗健康领域的 AI 应用。</div>
+            <a class="news-source" href="https://techcrunch.com/2026/03/10/amazon-launches-its-healthcare-ai-assistant-on-its-website-and-app/">来源: TechCrunch</a>
+        </div>
+
+        <div class="news-item product">
+            <span class="category">🔧 应用/产品</span>
+            <div class="news-title">AI 驱动的应用在长期留存方面存在困难</div>
+            <div class="news-summary">新报告显示，AI 驱动的应用在长期用户留存方面面临挑战。</div>
+            <a class="news-source" href="https://techcrunch.com/2026/03/10/ai-powered-apps-struggle-with-long-term-retention-new-report-shows/">来源: TechCrunch</a>
+        </div>
+
         <footer>
-            <p>🦞 OpenClaw AI News · 每日更新</p>
-            <p>📧 第2批 · 全新内容</p>
+            <p>每天更新 | 来源: Wired, TechCrunch, The Verge</p>
         </footer>
     </div>
 </body>
