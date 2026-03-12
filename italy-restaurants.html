@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>意大利美食餐厅推荐</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .city-section {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .city-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        .city-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+        .city-name {
+            font-size: 1.8rem;
+            color: #333;
+        }
+        .city-dates {
+            margin-left: auto;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .restaurant-card {
+            display: flex;
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+        .restaurant-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .restaurant-info {
+            flex: 1;
+        }
+        .restaurant-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .stars {
+            color: #ffc107;
+            margin-left: 10px;
+            font-size: 0.9rem;
+        }
+        .restaurant-type {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 8px;
+        }
+        .restaurant-specialty {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+        .restaurant-address {
+            color: #888;
+            font-size: 0.85rem;
+        }
+        .restaurant-hours {
+            color: #999;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+        .map-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            background: #4285f4;
+            border-radius: 12px;
+            margin-left: 20px;
+            flex-shrink: 0;
+        }
+        .map-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+        footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            opacity: 0.8;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .city-section {
+                padding: 20px;
+            }
+            .restaurant-card {
+                flex-direction: column;
+            }
+            .map-icon {
+                margin-left: 0;
+                margin-top: 15px;
+                width: 100%;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🇮🇹 意大利美食餐厅推荐</h1>
+            <p>4月24日 - 5月4日 | 米兰 → 佛罗伦萨 → 罗马</p>
+        </header>
+
+        <!-- 米兰 -->
+        <section class="city-section">
+            <div class="city-header">
+                <span class="city-icon">🏰</span>
+                <h2 class="city-name">米兰 Milano</h2>
+                <span class="city-dates">4月24日~26日</span>
+            </div>
+            
+            <a href="https://maps.app.goo.gl/8XqKJxYnGZs4Xk8F7" target="_blank" class="restaurant-card">
+                <div class="restaurant-info">
+                    <div class="restaurant-name">Luini Panzerotti <span class="stars">⭐⭐⭐⭐⭐</span></div>
+                    <span class="restaurant-type">街头小吃</span>
+                    <p class="restaurant-specialty">🔥 必吃意式炸披萨卷(Panzerotti)，米兰最著名的街头美食</p>
+                    <p class="restaurant-address">📍 Via Santa Radegonda, 16, 20121 Milano MI</p>
+                    <p class="restaurant-hours">🕐 周二至周六 10:00-20:00</p>
+                </div>
+                <div class="map-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+            </a>
+
+            <a href="https://maps.app.goo.gl/VZnJQhSxXKkYZ3sE8" target="_blank" class="restaurant-card">
+                <div class="restaurant-info">
+                    <div class="restaurant-name">Da Alfredo e Lella <span class="stars">⭐⭐⭐⭐⭐</span></div>
+                    <span class="restaurant-type">传统意餐</span>
+                    <p class="restaurant-specialty">🏠 家庭式经营，品尝正宗米兰特色烩饭和意面</p>
+                    <p class="restaurant-address">📍 Via Salaino, 10, 20157 Milano MI</p>
+                </div>
+                <div class="map-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+            </a>
+
+            <a href="https://maps.app.goo.gl/JZpKxNmSVT7YdXqV8" target="_blank" class="restaurant-card">
+                <div class="restaurant-info">
+                    <div class="restaurant-name">Sant'Ambroeus <span class="stars">⭐⭐⭐⭐⭐</span></div>
+                    <span class="restaurant-type">经典意餐</span>
+                    <p class="restaurant-specialty">🏛️ 百年历史餐厅品尝正宗米兰烩饭 Risotto alla Milanese</p>
+                    <p class="restaurant-address">📍 Corso Giacomo Matteotti, 7, 20121 Milano MI</p>
+                </div>
+                <div class="map-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+            </a>
+
+            <a href="https://maps.app.goo.gl/KmWpQxNmLVT8YcYs6" target="_blank" class="restaurant-card">
+                <div class="restaurant-info">
+                    <div class="restaurant-name">Trattoria Madonnina <span class="stars">⭐⭐⭐⭐</span></div>
+                    <span class="restaurant-type">家庭餐馆</span>
+                    <p class="restaurant-specialty">✝️ 传统伦巴第菜，位于大教堂广场附近</p>
+                    <p class="restaurant-address">📍 Via Laghetto, 2, 20122 Milano MI</p>
+                </div>
+                <div class="map-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+            </a>
+
+            <a href="https://maps.app.goo.gl/YZpLxNmPTU9XcZsL7" target="_blank" class="restaurant-card">
+                <div class="restaurant-info">
+                    <div class="restaurant-name">Peck Italian Bar <span class="stars">⭐⭐⭐⭐⭐</span></div>
+                    <span class="restaurant-type">餐厅/酒吧</span>
+                    <p class="restaurant-specialty">🍷 高端意餐+精选酒单，知名美食殿堂</p>
+                    <p class="restaurant-address">📍 Via Cesare Cantù, 3, 20123 Milano MI</p>
+                </div>
+                <div class="map-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+            </a>
+
+            <a href="https://maps.app.goo.gl/WMqJxNmQTZ9XdYsP5" target="_blank" class="restaurant-card">
+                <div class="restaurant-info">
+                    <div class="restaurant-name">Il Pastaio di Milano <span class="stars">⭐⭐⭐⭐</span></div>
+                    <span class="restaurant-type">意面专门店</span>
+                    <p class="restaurant-specialty">🍝 手打意面，当地人推荐</p>
+                    <p class="restaurant-address">📍 Via Garegnano, 28, 20156 Milano MI</p>
+                </div>
+                <div class="map-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+            </a>
+        </section>
+
+        <!-- 佛罗伦萨 -->
+        <section class="city-section">
+            <div class="city-header">
+                <span class="city-icon">🎨</span>
+                <h2 class="city-name">佛罗伦萨 Firenze</h2>
+                <span class="city-dates">4月27日~30日</span>
+            </div>
+            
+            <a href="https://maps.app.goo.gl/NmWpQxLmPV8YcZsT6" target="_blank" class="restaurant-card">
+                <div class="restaurant-info">
+                    <div class="restaurant-name">Trattoria ZaZa <span class="stars">⭐⭐⭐⭐⭐</span></div>
+                    <span class="restaurant-type">传统托斯卡纳菜</span>
+                    <p class="restaurant-specialty">🥩 必吃T骨牛排、佛罗伦萨牛肚，常年排队名店</p>
+                    <p class="restaurant-address">📍 Piazza del Mercato Centrale, 41r, 50123 Firenze</p>
+                    <p class="restaurant-hours">🕐 周一至周六 11:00-15:30, 18:30-22:30</p>
+                </div>
+                <div class="map-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+            </a>
+
+            <a href="https://maps.app.goo.gl/KmWpQxNmPV8YcZsL7" target="_blank" class="restaurant-card">
+                <div class="restaurant-info">
+                    <div class="restaurant-name">Da Nerbone <span class="stars">⭐⭐⭐⭐⭐</span></div>
+                    <span class="restaurant-type">百年老店</span>
+                    <p class="restaurant-specialty">🔥 必吃牛肚包(Lampredotto)，中央市场内</p>
+                    <p class="restaurant-address">📍 Mercato Centrale, Stallo 1, Via dell'Ariento, Firenze</p>
+                    <p class="restaurant-hours">🕐 周一至周六 07:00-14:00</p>
+                </div>
+                <div class="map-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+            </a>
+
+            <a href="https://maps.app.goo.gl/LZpQxNmPTU9XdYsK8" target="_blank" class="restaurant-card">
+                <div class="restaurant-info">
+                    <div class="restaurant-name">Il Santo Bevitore <span class="stars">⭐⭐⭐⭐⭐</span></div>
+                    <span class="restaurant-type">意餐/酒吧</span>
+                    <p class="restaurant-specialty">🍷 现代托斯卡纳菜+优质葡萄酒</p>
+                    <p class="restaurant-address">📍 Via di Santo Spirito, 58/60, 50125 Firenze</p>
+                </div>
+                <div class="map-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+            </a>
+
+            <a href="https://maps.app.goo.gl/MmWpQxNmQTZ9XdYsP6" target="_blank" class="restaurant-card">
+                <div class="restaurant-info">
+                    <div class="restaurant-name">Le Volpi e l'Uva <span class="stars">⭐⭐⭐⭐</span></div>
+                    <span class="restaurant-type">小酒馆</span>
+                    <p class="restaurant-specialty">🍷 tapas式小食+精选红酒</p>
+                    <p class="restaurant-address">📍 Piazza dei Rossi, 1r, 50125 Firenze</p>
+                </div>
+                <div class="map-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+            </a>
+
+            <a href="https://maps.app.goo.gl/NmWpQxLmPV8YcZsT7" target="_blank" class="restaurant-card">
+                <div class="restaurant-info">
+                    <div class="restaurant-name">Trattoria Mario <span class="stars">⭐⭐⭐⭐</span></div>
+                    <span class="restaurant-type">家庭餐馆</span>
+                    <p class="restaurant-specialty">🏠 传统佛罗伦萨菜，当地人食堂</p>
+                    <p class="restaurant-address">📍 Via Rosina, 2r, 50123 Firenze</p>
+                    <p class="restaurant-hours">🕐 周一至周六 12:00-15:30</p>
+                </div>
+                <div class="map-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+            </a>
+
+            <a href="https://maps.app.goo.gl/KmWpQxNmPV8YcZsL8" target="_blank" class="restaurant-card">
+                <div class="restaurant-info">
+                    <div class="restaurant-name">Officina Profumo-Farmaceutica <span class="stars">⭐⭐⭐⭐⭐</span></div>
+                    <span class="restaurant-type">餐厅/历史建筑</span>
+                    <p class="restaurant-specialty">🏛️ 在世界最古老的药店里用餐体验</p>
+                    <p class="restaurant-address">📍 Via della Scala, 16, 50123 Firenze</p>
+                    <p class="restaurant-hours">⚠️ 需提前预约</p>
+                </div>
+                <div class="map-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+            </a>
+        </section>
+
+        <!-- 罗马 -->
+        <section class="city-section">
+            <div class="city-header">
+                <span class="city-icon">🏛️</span>
+                <h2 class="city-name">罗马 Roma</h2>
+                <span class="city-dates">5月1日~4日</span>
+            </div>
+            
+            <a href="https://maps.app.goo.gl/LZpQxNmPTU9XdYsK9" target="_blank" class="restaurant-card">
+                <div class="restaurant-info">
+                    <div class="restaurant-name">Da Enzo al 29 <span class="stars">⭐⭐⭐⭐⭐</span></div>
+                    <span class="restaurant-type">传统罗马菜</span>
+                    <p class="restaurant-specialty">🔥 必吃Carbonara、罗马式炸朝鲜蓟，超人气排队店</p>
+                    <p class="restaurant-address">📍 Via dei Vascellari, 29, 00153 Roma</p>
+                    <p class="restaurant-hours">🕐 周二至周日 12:30-15:30, 19:30-23:00</p>
+                </div>
+                <div class="map-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+            </a>
+
+            <a href="https://maps.app.goo.gl/MmWpQxNmQTZ9XdYsP7" target="_blank" class="restaurant-card">
+                <div class="restaurant-info">
+                    <div class="restaurant-name">Roscioli Salumeria con Cucina <span class="stars">⭐⭐⭐⭐⭐</span></div>
+                    <span class="restaurant-type">肉铺/餐厅</span>
+                    <p class="restaurant-specialty">🥓 知名老店，必吃Carbonara+精选肉类</p>
+                    <p class="restaurant-address">📍 Via dei Giubbonari, 21, 00153 Roma</p>
+                </div>
+                <div class="map-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+            </a>
+
+            <a href="https://maps.app.goo.gl/NmWpQxLmPV8YcZsT8" target="_blank" class="restaurant-card">
+                <div class="restaurant-info">
+                    <div class="restaurant-name">Pizzarium <span class="stars">⭐⭐⭐⭐⭐</span></div>
+                    <span class="restaurant-type">披萨店</span>
+                    <p class="restaurant-specialty">🍕 罗马方形披萨，Gabriele Bonci创立</p>
+                    <p class="restaurant-address">📍 Via della Meloria, 43, 00136 Roma</p>
+                    <p class="restaurant-hours">🕐 周四至周二 11:00-22:00</p>
+                </div>
+                <div class="map-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+            </a>
+
+            <a href="https://maps.app.goo.gl/KmWpQxNmPV8YcZsL9" target="_blank" class="restaurant-card">
+                <div class="restaurant-info">
+                    <div class="restaurant-name">Trapizzino <span class="stars">⭐⭐⭐⭐⭐</span></div>
+                    <span class="restaurant-type">街头小吃</span>
+                    <p class="restaurant-specialty">🔥 罗马街头三角形披萨包发明者</p>
+                    <p class="restaurant-address">📍 Via Giovanni Lanza, 166, 00136 Roma</p>
+                </div>
+                <div class="map-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+            </a>
+
+            <a href="https://maps.app.goo.gl/LZpQxNmPTU9XdYsL1" target="_blank" class="restaurant-card">
+                <div class="restaurant-info">
+                    <div class="restaurant-name">Il Supplì <span class="stars">⭐⭐⭐⭐</span></div>
+                    <span class="restaurant-type">小吃店</span>
+                    <p class="restaurant-specialty">🍚 经典罗马小吃炸饭团(Supplì)</p>
+                    <p class="restaurant-address">📍 Via del Corso, 84, 00186 Roma</p>
+                </div>
+                <div class="map-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+            </a>
+
+            <a href="https://maps.app.goo.gl/MmWpQxNmQTZ9XdYsQ1" target="_blank" class="restaurant-card">
+                <div class="restaurant-info">
+                    <div class="restaurant-name">Tonnarello <span class="stars">⭐⭐⭐⭐</span></div>
+                    <span class="restaurant-type">家庭餐馆</span>
+                    <p class="restaurant-specialty">🍝 罗马意面+海鲜，当地人食堂</p>
+                    <p class="restaurant-address">📍 Via della Paglia, 7/15, 00153 Roma</p>
+                </div>
+                <div class="map-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+            </a>
+
+            <a href="https://maps.app.goo.gl/NmWpQxLmPV8YcZsT9" target="_blank" class="restaurant-card">
+                <div class="restaurant-info">
+                    <div class="restaurant-name">Da Cesare al Casaletto <span class="stars">⭐⭐⭐⭐⭐</span></div>
+                    <span class="restaurant-type">传统罗马菜</span>
+                    <p class="restaurant-specialty">💎 Carbonara+烤羊肉，远离游客区的宝藏餐厅</p>
+                    <p class="restaurant-address">📍 Via del Casaletto, 55, 00151 Roma</p>
+                </div>
+                <div class="map-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+            </a>
+
+            <a href="https://maps.app.goo.gl/KmWpQxNmPV8YcZsM1" target="_blank" class="restaurant-card">
+                <div class="restaurant-info">
+                    <div class="restaurant-name">Felice a Testaccio <span class="stars">⭐⭐⭐⭐</span></div>
+                    <span class="restaurant-type">经典罗马菜</span>
+                    <p class="restaurant-specialty">🐂 必吃牛尾、罗马特色菜</p>
+                    <p class="restaurant-address">📍 Via di Monte Testaccio, 39, 00153 Roma</p>
+                </div>
+                <div class="map-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+            </a>
+        </section>
+
+        <footer>
+            <p>🍝 祝你旅途愉快，吃得开心！</p>
+            <p>更新于 2026年3月12日</p>
+        </footer>
+    </div>
+</body>
+</html>
